@@ -8,7 +8,7 @@ def call() {
     //   sh "oc login https://api.ocp-training.ivolve-test.com:6443 --username=${USERNAME} --password=${PASSWORD} "
     //}
 
-     withCredentials([string(credentialsId: 'saTocken', variable: 'OpenShift_CREDENTIALS')]) {
+     withCredentials([string(credentialsId: 'jsa', variable: 'OpenShift_CREDENTIALS')]) {
     // Login to OpenShift using the service account token
          sh "oc login https://api.ocp-training.ivolve-test.com:6443 --token=${OpenShift_CREDENTIALS} --insecure-skip-tls-verify "
      }
