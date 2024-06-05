@@ -10,5 +10,6 @@ def call() {
 
     // Deploy the image on the project
     sh "oc apply -f deployment.yml"
+    sh "oc apply -f service.yml"
     
 }
