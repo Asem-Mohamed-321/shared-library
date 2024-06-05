@@ -8,5 +8,5 @@ def call(String imageName) {
         
         // Build and push Docker image
         echo "Pushing Docker image..."
-        sh "docker push ${imageName}:${BUILD_NUMBER}"	 
+        sh "docker push asemmohamed321/${imageName}:${BUILD_NUMBER}"	 
 }
