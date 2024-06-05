@@ -3,10 +3,6 @@
 // ocCredentialsID 'openshift'
 def call() {
 
-    // login to oc Cluster
-    //withCredentials([usernamePassword(credentialsId: "openshift", usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-    //   sh "oc login https://api.ocp-training.ivolve-test.com:6443 --username=${USERNAME} --password=${PASSWORD} "
-    //}
 
      withCredentials([string(credentialsId: 'jsa2', variable: 'OC_TOKEN')]) {
     // Login to OpenShift using the service account token
