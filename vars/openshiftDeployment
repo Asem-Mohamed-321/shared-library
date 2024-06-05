@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 // ocCredentialsID 'openshift'
-def call( String branchName) {
+def call() {
 
     // login to oc Cluster
     withCredentials([usernamePassword(credentialsId: "openshift", usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
