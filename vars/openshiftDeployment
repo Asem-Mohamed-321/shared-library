@@ -1,0 +1,10 @@
+#!/usr/bin/env groovy
+
+// ocCredentialsID 'openshift'
+def call( String branchName) {
+
+    // login to k8s Cluster via KubeConfig file
+    withCredentials([usernamePassword(credentialsId: "openshift", usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+        sh "oc login https://api.ocp-training.ivolve-test.com:6443 --username=${USERNAME} --password=${PASSWORD} "
+    }
+}
