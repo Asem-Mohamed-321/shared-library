@@ -1,5 +1,5 @@
 #!usr/bin/env groovy
-def call(String dockerHubCredentialsID, String imageName) {
+def call(String imageName) {
 
 	// Log in to DockerHub 
 	withCredentials([usernamePassword(credentialsId: "dockerhub", usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
