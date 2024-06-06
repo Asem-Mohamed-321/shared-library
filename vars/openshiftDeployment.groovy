@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 // ocCredentialsID 'openshift'
-def call() {
+def call(String imageName) {
 
 
      withCredentials([string(credentialsId: 'jsa2', variable: 'OC_TOKEN')]) {
