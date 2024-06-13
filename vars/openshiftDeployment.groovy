@@ -9,7 +9,7 @@ def call(String imageName) {
         sh "oc login https://console-openshift-console.apps.ocp-training.ivolve-test.com/  --token=${OC_TOKEN} --insecure-skip-tls-verify "
     }
 
-    // sh "sed -i 's|image:.*|image: ${imageName}:${BUILD_NUMBER}|g' deployment.yml"  // change the image tag in the deployment file
+     sh "sed -i 's|image:.*|image: ${imageName}:${BUILD_NUMBER}|g' deployment.yml"  // change the image tag in the deployment file
      
     // Deploy the image on the project
     sh "oc apply -f deployment.yml -n asemmohamed"
